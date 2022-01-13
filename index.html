@@ -1,12 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Survey</title>
 </head>
 <body>
-  
+  <div class="container">
+    <form id="survey">
+      <div class="row">
+        <div class="col-4">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" id="email">
+          </div>
+        </div>
+        <div class="col-4">  
+          <div class="form-group">
+            <label for="favFood">Favorite food:</label>
+            <input class="form-control" type="text" id="favFood">
+          </div>
+          <div class="form-group">
+            <label for="music">Favorite genre of music:</label>
+            <select class="form-control" id="music">
+              <option>Classical</option>
+              <option>Rock</option>
+              <option>Country</option>
+              <option>Electrical</option>
+              <option>Contemporary</option>
+            </select>
+          </div>
+          </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label>Is this page beautiful?</label>
+            <div class="radio">
+              <label>
+                <input type="radio" name="beautiful" value="Yes">
+                Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="beautiful" value="No">
+                No
+              </label>
+            </div>
+          </div>
+        </div>
+      <button type="submit" class="btn">Send survey</button>
+    </div>
+      <div id="surveyResults">
+        <h1>Your Info</h1>
+        <ul>
+          <li>Your name is <span class="nameResult"></span></li>
+          <li>Your email is <span class="emailResult"></span></li>
+          <li>Your Favorite food is <span class="foodResult"></span></li>
+          <li>Your name is Favorite genre of music <span class="musicResult"></span></li>
+          <li>Your opinion doesnt matter but, <span class="beautifulResult"></span></li>
+        </ul>
+      </div>
+    </div>
+    </form>
+      
+  </div>
 </body>
 </html>
